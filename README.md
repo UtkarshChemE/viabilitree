@@ -10,18 +10,14 @@ Mathematical viability theory offers concepts and methods that are suitable to s
 
 ### Simple example
 #### Population Growth Model
-This example is taken from [4]. The population model is Malthusian. The population viability problem consists in maintaining the size of a population in a given interval $`[a;b]`$. The state of the system is described by the variables $`x(t)`$, the size of the population, and $`y(t)`$, the population growth rate. The dynamics are described by the following equations:
-```math
-\left\{
-\begin{array}{lll}
-x(t+dt) &=& x(t)+x(t)y(t)dt\\
-y(t+dt) &=& y(t)+u(t)dt  \text{  with  }  \left| u(t) \right| \leq c
-\end{array}\right.
-```
-The dynamics are controlled by taking the growth rate evolution in interval $`[-c,c]`$. This viability problem can be resolved analytically (see [4]} for details). When $`dt`$ tends toward $`0`$, the theoretical viability kernel is defined by:
-```math
-Viab(K) = \left\{ (x,y)\in {\mathbb R}^2| \quad  x \in [a;b], y\in [-\sqrt{2c\text{log}(\frac{x}{a})}; \sqrt{2c\text{log}(\frac{b}{x})}] \right\}
-```
+This example is taken from [4]. The population model is Malthusian. The population viability problem consists in maintaining the size of a population in a given interval <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;[a;b]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;[a;b]" title="[a;b]" /></a>. The state of the system is described by the variables <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x(t)" title="x(t)" /></a>, the size of the population, and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;y(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;y(t)" title="y(t)" /></a>, the population growth rate. The dynamics are described by the following equations:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\left\{&space;\begin{array}{lll}&space;x(t&plus;dt)&space;&=&&space;x(t)&plus;x(t)y(t)dt\\&space;y(t&plus;dt)&space;&=&&space;y(t)&plus;u(t)dt&space;\text{&space;with&space;}&space;\left|&space;u(t)&space;\right|&space;\leq&space;c&space;\end{array}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left\{&space;\begin{array}{lll}&space;x(t&plus;dt)&space;&=&&space;x(t)&plus;x(t)y(t)dt\\&space;y(t&plus;dt)&space;&=&&space;y(t)&plus;u(t)dt&space;\text{&space;with&space;}&space;\left|&space;u(t)&space;\right|&space;\leq&space;c&space;\end{array}\right." title="\left\{ \begin{array}{lll} x(t+dt) &=& x(t)+x(t)y(t)dt\\ y(t+dt) &=& y(t)+u(t)dt \text{ with } \left| u(t) \right| \leq c \end{array}\right." /></a>
+
+The dynamics are controlled by taking the growth rate evolution in interval <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;[-c,c]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;[-c,c]" title="[-c;c]" /></a>. This viability problem can be resolved analytically (see [4]} for details). When $`dt`$ tends toward $`0`$, the theoretical viability kernel is defined by:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\text{Viab}(K)&space;=&space;\left\{&space;(x,y)\in&space;{\mathbb&space;R}^2|&space;\quad&space;x&space;\in&space;[a;b],&space;y\in&space;\left[-\sqrt{2c\log\frac{x}{a}};&space;\sqrt{2c\log\frac{b}{x}}\right]&space;\right\}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{Viab}(K)&space;=&space;\left\{&space;(x,y)\in&space;{\mathbb&space;R}^2|&space;\quad&space;x&space;\in&space;[a;b],&space;y\in&space;\left[-\sqrt{2c\log\frac{x}{a}};&space;\sqrt{2c\log\frac{b}{x}}\right]&space;\right\}" title="\text{Viab}(K) = \left\{ (x,y)\in {\mathbb R}^2| \quad x \in [a;b], y\in \left[-\sqrt{2c\log\frac{x}{a}}; \sqrt{2c\log\frac{b}{x}}\right] \right\}" /></a>
+
 
 <img src="images/populationGitlab.png" width="300" alt="Figure 1: Viability kernel of the population viability problem">[Figure 1: Viability kernel of the population viability problem][Figure 1]
 
@@ -29,10 +25,10 @@ Viab(K) = \left\{ (x,y)\in {\mathbb R}^2| \quad  x \in [a;b], y\in [-\sqrt{2c\te
 
 
 The above figure shows an approximation of the viability kernel for the population problem with:
-* constraint set $`K=[a=0.2,b=3]\times[d=-2,e=2]`$, 
-* parameters $`dt=0.1`$, 
-* control set $`U=[-0.5;0.5]`$ with discretization step 0.02. 
-The color stands for the value of a control $`u`$ which allows the state to stay in the viability kernel. In black the boundary of the true kernel.
+* constraint set <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K=[a=0.2,b=3]\times[d=-2,e=2]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K=[a=0.2,b=3]\times[d=-2,e=2]" title="K=[a=0.2,b=3]\times[d=-2,e=2]" /></a>, 
+* parameters <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;dt=0.1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;dt=0.1" title="dt=0.1" /></a>, 
+* control set <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;U=[-0.5;0.5]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;U=[-0.5;0.5]" title="U=[-0.5;0.5]" /></a> with discretization step 0.02. 
+The color stands for the value of a control <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;u" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;u" title="u" /></a> which allows the state to stay in the viability kernel. In black the boundary of the true kernel.
 
 **By definition of the viability kernel, starting from any point in the viability kernel, there exists always an evolution that stays in the viability kernel. Starting from any point outside the viability kernel, any evolution will exit the constraint set in finite time.** This is why the notion of viability kernel is so useful.
 
@@ -104,53 +100,41 @@ _a_ to _e_ are the same parameters as in the mathematical definition.
 
 The viability problem is defined by class _KernelComputation_ with the following parameters:
 
-* _depth_ which defines the accuracy of the approximation. There are $`2^{depth}`$ grid points (here, $`2^{\frac{depth}{2}}`$ points per axes).
+* _depth_ which defines the accuracy of the approximation. There are <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;2^{depth}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;2^{depth}" title="2^{depth}" /></a> grid points (here, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;2^{\frac{depth}{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;2^{\frac{depth}{2}}" title="2^{\frac{depth}{2}}" /></a> points per axes).
 * _dynamic_: the model dynamic
-* _zone_: the area to explore and here it is also the constraint set, $`[a,b]\times[d,e]`$
-* _controls_: the set of admissible controls, it is the same set for each state,$`[-c,c]`$
+* _zone_: the area to explore and here it is also the constraint set, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;[a,b]\times[d,e]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;[a,b]\times[d,e]" title="[a,b]\times[d,e]" /></a>
+* _controls_: the set of admissible controls, it is the same set for each state,<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;[-c,c]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;[-c,c]" title="[-c,c]" /></a>
 
 The computation itself is done by the _approximate_ function.
 
 ### Mathematical Viability Theory ([2], [3])
 <a id="MVT"></a>
-In Viabilitree we consider a viability problem defined by a controlled dynamical system $`S`$, a set-valued map $`U`$ (the set of admissible controls depending on the state of the system), and a compact subset $`K`$ of the state space (the set of constraints):
-```math
-(S)\left\{
-\begin{array}{lll}
-x'(t)&=&\Phi(x(t),u(t))\\
-u(t)&\in & U(x(t))
-\end{array}\right.
-```
- $`x(t)`$ is the state of the system $`S`$, $`x(t)\in {\mathbb R}^p`$ a finite dimensional vector space.
- $`u(t)`$ is the control, with $`u(t)\in {\mathbb{R}}^q`$.
- The set-valued map $`U : {\mathbb R}^p\leadsto {\mathbb{R}}^q`$ gives the set of admissible control for each state $`x`$. $`\Phi`$ is a function from $`\text{Graph}(U)`$ to $`{\mathbb R}^p`$.
-$`K\subset {\mathbb R}^p`$ is a compact subset of $`{\mathbb R}^p`$, it is the set of desirable states, the constraint set in which the state $`x(t)`$ is supposed to stay.
+In Viabilitree we consider a viability problem defined by a controlled dynamical system <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;S" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;S" title="S"/></a>, a set-valued map <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;U" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;U" title="U"/></a> (the set of admissible controls depending on the state of the system), and a compact subset <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K" title="K"/></a> of the state space (the set of constraints):
 
-The viability kernel $`viab_S(K)`$ is the largest subset of $`K`$ (possibly empty) that gathers the states from which it is possible to find a control function $`u(t)`$ such that the evolution $`x(.)`$ stays in the compact set $`K`$.
-```math
-x\in viab_S(K) \Leftrightarrow  \exists u(.) \quad \forall t\geq 0 \left\{
-\begin{array}{lll}
-x'(t)&=&\Phi(x(t),u(t))\\
-u(t)&\in & U(x(t))\\
-x(t)&\in & K
-\end{array}\right.
-```
-In Viabilitree we follow the method described in [5], we consider dynamical system ($`S_{dt}`$) discretized in time: 
-```math
-\begin{array}{lll}
-F_{dt}(x)&=& \left\{ x+\Phi(x,u)dt, u \in U(x) \right\}.
-\end{array}
+<a href="https://www.codecogs.com/eqnedit.php?latex=(S)\left\{&space;\begin{array}{lll}&space;x'(t)&=&\Phi(x(t),u(t))\\&space;u(t)&\in&space;&&space;U(x(t))&space;\end{array}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?(S)\left\{&space;\begin{array}{lll}&space;x'(t)&=&\Phi(x(t),u(t))\\&space;u(t)&\in&space;&&space;U(x(t))&space;\end{array}\right." title="(S)\left\{ \begin{array}{lll} x'(t)&=&\Phi(x(t),u(t))\\ u(t)&\in & U(x(t)) \end{array}\right." /></a>
 
-```
-We use the learning algorithm $`L`$ of kd-tree described in [1] on a discretized grid $`K_h`$ to compute an approximation $`L(K_h)`$ of the viability kernel $`viab_{S_{dt}}(K)`$ of the discretized dynamical system ($`S_{dt}`$) with constraint set $`K`$. When the learning algorithm and $`S_{dt}`$ verify some conditions, [1], [5] and [6] ensure that $`L(K_h)`$ converges to $`viab_S(K)`$ when $`h`$ and $`dt`$ tend to 0.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x(t)" title="x(t)"/></a> is the state of the system <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;S" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;S" title="S"/></a>, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x(t)\in&space;{\mathbb&space;R}^p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x(t)\in&space;{\mathbb&space;R}^p" title="x(t)\in {\mathbb R}^p" /></a> a finite dimensional vector space.
+ <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;u(t)" title="u(t)" /></a> is the control, with <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;u(t)\in&space;{\mathbb{R}}^q" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;u(t)\in&space;{\mathbb{R}}^q" title="u(t)\in {\mathbb{R}}^q" /></a>.
+ The set-valued map <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;U&space;:&space;{\mathbb&space;R}^p\leadsto&space;{\mathbb{R}}^q" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;U&space;:&space;{\mathbb&space;R}^p\leadsto&space;{\mathbb{R}}^q" title="U : {\mathbb R}^p\leadsto {\mathbb{R}}^q" /></a> gives the set of admissible control for each state <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x" title="x" /></a>. <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Phi" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\Phi" title="\Phi" /></a> is a function from <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\text{Graph}(U)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\text{Graph}(U)" title="\text{Graph}(U)" /></a> to <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;{\mathbb&space;R}^p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;{\mathbb&space;R}^p" title="{\mathbb R}^p" /></a>.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K\subset&space;{\mathbb&space;R}^p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K\subset&space;{\mathbb&space;R}^p" title="K\subset {\mathbb R}^p" /></a> is a compact subset of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;{\mathbb&space;R}^p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;{\mathbb&space;R}^p" title="{\mathbb R}^p" /></a>, it is the set of desirable states, the constraint set in which the state <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x(t)" title="x(t)" /></a> is supposed to stay.
+
+The viability kernel <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\text{viab}_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\text{viab}_S(K)" title="\text{viab}_S(K)" /></a> is the largest subset of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K" title="K" /></a> (possibly empty) that gathers the states from which it is possible to find a control function <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;u(t)" title="u(t)" /></a> such that the evolution <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x(.)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;x(.)" title="x(.)" /></a> stays in the compact set <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K" title="K" /></a>.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x\in&space;\text{viab}_S(K)&space;\Leftrightarrow&space;\exists&space;u(.)&space;\quad&space;\forall&space;t\geq&space;0&space;\left\{&space;\begin{array}{lll}&space;x'(t)&=&\Phi(x(t),u(t))\\&space;u(t)&\in&space;&&space;U(x(t))\\&space;x(t)&\in&space;&&space;K&space;\end{array}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?x\in&space;\text{viab}_S(K)&space;\Leftrightarrow&space;\exists&space;u(.)&space;\quad&space;\forall&space;t\geq&space;0&space;\left\{&space;\begin{array}{lll}&space;x'(t)&=&\Phi(x(t),u(t))\\&space;u(t)&\in&space;&&space;U(x(t))\\&space;x(t)&\in&space;&&space;K&space;\end{array}\right." title="x\in \text{viab}_S(K) \Leftrightarrow \exists u(.) \quad \forall t\geq 0 \left\{ \begin{array}{lll} x'(t)&=&\Phi(x(t),u(t))\\ u(t)&\in & U(x(t))\\ x(t)&\in & K \end{array}\right." /></a>
+
+In Viabilitree we follow the method described in [5], we consider dynamical system (<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;S_{dt}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;S_{dt}" title="S_{dt}" /></a>) discretized in time: 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{array}{lll}&space;F_{dt}(x)&=&&space;\left\{&space;x&plus;\Phi(x,u)dt,&space;u&space;\in&space;U(x)&space;\right\}.&space;\end{array}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{array}{lll}&space;F_{dt}(x)&=&&space;\left\{&space;x&plus;\Phi(x,u)dt,&space;u&space;\in&space;U(x)&space;\right\}.&space;\end{array}" title="\begin{array}{lll} F_{dt}(x)&=& \left\{ x+\Phi(x,u)dt, u \in U(x) \right\}. \end{array}" /></a>
+
+We use the learning algorithm <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L" title="L" /></a> of kd-tree described in [1] on a discretized grid <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K_h" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K_h" title="K_h" /></a> to compute an approximation <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L(K_h)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L(K_h)" title="L(K_h)" /></a> of the viability kernel <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\text{viab}_{S_{dt}}(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\text{viab}_{S_{dt}}(K)" title="\text{viab}_{S_{dt}}(K)" /></a> of the discretized dynamical system (<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;S_{dt}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;S_{dt}" title="S_{dt}" /></a>) with constraint set <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K" title="K" /></a>. When the learning algorithm and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;S_{dt}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;S_{dt}" title="S_{dt}" /></a> verify some conditions, [1], [5] and [6] ensure that <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L(K_h)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L(K_h)" title="L(K_h)" /></a> converges to <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;viab_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;viab_S(K)" title="viab_S(K)" /></a> when <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;h" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;h" title="h" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;dt" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;dt" title="dt" /></a> tend to 0.
 
 The convergence conditions are:
- * $`F`$ is [Marchaud][Marchaud] and $`\mu`$-[Lipschitz][Lipschitz] with closed images
- * $`K`$ is a compact set.
- * $`L(K^0)=K`$. 
- * $`viab_S(K)`$ is compact, it is path-connected 
- * $`viab_S(K)`$ erosion with $`B(\epsilon)`$ is path-connected and points of $`viab_S(K)`$ are at most distant from the eroded set by $`\epsilon \sqrt{p}`$
- * $`viab_S(K)`$ complementary set is path-connected as is its erosion with $`B(\epsilon)`$, and its points are at most distant from the eroded set by $`\epsilon \sqrt{p}`$.
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;F" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;F" title="F" /></a> is [Marchaud][Marchaud] and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mu" title="\mu" /></a>-[Lipschitz][Lipschitz] with closed images
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;K" title="K" /></a> is a compact set.
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L(K^0)=K" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L(K^0)=K" title="L(K^0)=K" /></a>. 
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;viab_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;viab_S(K)" title="viab_S(K)" /></a> is compact, it is path-connected 
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;viab_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;viab_S(K)" title="viab_S(K)" /></a> erosion with <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;B(\epsilon)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;B(\epsilon)" title="B(\epsilon)" /></a> is path-connected and points of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;viab_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;viab_S(K)" title="viab_S(K)" /></a> are at most distant from the eroded set by <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\epsilon&space;\sqrt{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\epsilon&space;\sqrt{p}" title="\epsilon \sqrt{p}" /></a>
+ * <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;viab_S(K)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;viab_S(K)" title="viab_S(K)" /></a> complementary set is path-connected as is its erosion with <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;B(\epsilon)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;B(\epsilon)" title="B(\epsilon)" /></a>, and its points are at most distant from the eroded set by <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\epsilon&space;\sqrt{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\epsilon&space;\sqrt{p}" title="\epsilon \sqrt{p}" /></a>.
 The two last properties ensure that there are no small tentacles.
 
 In practice points of the grid are removed from the current dilated approximation when following the dynamic with each available control they always leave the dilated approximation at the next step. See [KernelComputation][kernelLink] for implementation details.
